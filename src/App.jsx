@@ -5,19 +5,21 @@ import Products from "./pages/Products";
 import Contact from "./pages/Contact";
 import CounterPage from "./pages/CounterPage";
 import RegisterPage from "./pages/RegisterPage";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/counter" element={<CounterPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/products" element={<Products />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/counter" element={<CounterPage />} />
+                <Route path="/register" element={<RegisterPage />} />
+                <Route path="/products/:id" element={<ProductDetail />} />;
+            </Routes>
+        </BrowserRouter>
+    );
 }
 export default App;
